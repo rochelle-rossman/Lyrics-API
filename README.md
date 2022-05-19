@@ -5,4 +5,4 @@ This project was made to showcase newly acquired skills utilizing webpack and an
 
 [View the project](https://cheerful-starburst-54e9b2.netlify.app)
 
-![screenshot](src/images/Screen Shot 2022-05-19 at 11.07.06 AM.png)
+![Find the Lyrics](src/images/Screen%20Shot%202022-05-19%20at%2011.07.06%20AM.png)
