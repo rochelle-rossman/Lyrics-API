@@ -40,10 +40,12 @@ const renderForm = () => {
 };
 
 const eventListeners = () => {
-  document.querySelector('#form').addEventListener('submit', (e) => {
+  const form = document.querySelector('#form');
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     getLyrics();
     lyricsOnDom();
+    form.reset();
   });
 };
 
