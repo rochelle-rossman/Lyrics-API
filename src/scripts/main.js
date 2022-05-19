@@ -17,10 +17,7 @@ const getLyrics = () => new Promise((resolve, reject) => {
 
 const lyricsOnDom = (artist, song) => {
   getLyrics(artist, song).then((response) => {
-    document.querySelector('#app').innerHTML = response.lyrics.replaceAll(
-      '\n',
-      '<br>'
-    );
+    document.querySelector('#app').innerHTML = response.lyrics;
   });
 };
 
@@ -37,32 +34,20 @@ const renderForm = () => {
           </div>
           
   
-  <button id="submit" type="submit" class="btn btn-primary">Get Lyrics</button>
+  <button id="submit" type="submit" class="btn btn-primary">Find Lyrics</button>
 </form>`;
-  renderToDom('#login-form-container', domString);
-};
-
-const buttonOnDom = () => {
-  const domString = `<button id="consoleButton" type="button" class="btn btn-primary"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-  Custom button
-</button>`;
-  renderToDom('#button-div', domString);
+  renderToDom('#form', domString);
 };
 
 const eventListeners = () => {
-  document.querySelector('#login-form-container').addEventListener('submit', (e) => {
+  document.querySelector('#form').addEventListener('submit', (e) => {
     e.preventDefault();
     getLyrics();
     lyricsOnDom();
-    document.querySelector('#consoleButton').addEventListener('click', () => {
-      console.warn();
-    });
   });
 };
 
 const startApp = () => {
-  buttonOnDom();
   renderForm();
   eventListeners();
 };

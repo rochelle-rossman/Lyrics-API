@@ -3,8 +3,57 @@
 
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: #EFEEEB;
+  color: #E65634;
   text-align: center;
   margin-top: 100px;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  color:#40434A;
+  text-align: center;
+  overflow: hidden;
+  font-size: 60px;
+}
+
+#app {
+  margin: 15px;
+  white-space: pre-line;
+  font-weight: 700;
+  color: #40434A;
+}
+
+form {
+  margin: 10px;
+  max-width: auto;
+}
+
+#submit {
+  box-shadow: 10px 12px 0px 0px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 10px;
+  border: 2px solid #29668f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 15px 55px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+  margin-bottom: 10px;
+}
+
+#submit:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+}
+
+#submit:active {
+  position: relative;
+  top: 1px;
 }
