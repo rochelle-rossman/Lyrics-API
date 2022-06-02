@@ -3,14 +3,15 @@
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import axios from 'axios';
-
-const renderToDom = (divId, textToRender) => {
-  const selectedElement = document.querySelector(divId);
-  selectedElement.innerHTML = textToRender;
-};
+import renderToDom from './helpers/renderToDom';
 
 const getLyrics = () => new Promise((resolve, reject) => {
-  axios.get(`https://api.lyrics.ovh/v1/${document.querySelector('#artist').value}/${document.querySelector('#song').value}`)
+  axios
+    .get(
+      `https://api.lyrics.ovh/v1/${document.querySelector('#artist').value}/${
+        document.querySelector('#song').value
+      }`
+    )
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
@@ -45,7 +46,6 @@ const eventListeners = () => {
     e.preventDefault();
     getLyrics();
     lyricsOnDom();
-    form.reset();
   });
 };
 
